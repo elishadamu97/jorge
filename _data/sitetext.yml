@@ -120,29 +120,28 @@ en: &DEFAULT_EN
         image: assets/img/face/CV.jpg
         social:
             - url:  https://docs.google.com/document/d/e/2PACX-1vS9hWImolgWfJlTnLHu7iM7IdPJAVgsi_4e6c9m324DiotmnN5f1_xz8uQi9IyCvJvS_ECNxvluGGhz/pub
-              icon: fa-file-pdf
+              icon: fas fa-graduation-cap
 
       - name: "Portfolio"
         role: "Sample of my work and Proejcts"
         image: assets/img/face/Folio.jpg
         social:
             - url:  https://docs.google.com/presentation/d/e/2PACX-1vTl_1PrUTZ40tNS7fvhEg3pEhfPxEDdSvyF7zg5ANR7eJnoEfibeiHAuK1v29LpO_lLwkxecLIs1QGr/pub?start=true&loop=true&delayms=5000
-              icon: fa-file-pdf
+              icon: fas fa-laptop
 
   contact:
     title: "Contact Me"
-    text: "Let's work tougether"
+    text: "Let's work together"
     section: contact
     name: "Name*"
     name-validation: "Jorge Correa"
     email: "Email*"
     email-validation: "jorgecorrea.id@gmail.com"
-    phone: "Phone Number"
-    phone-validation: "+39 34 000 0000"
-    message: "Message*"
+    comment: "Comment*"
     message-validation: "Contact me for any reason"
     subject: "Contact Form Submission"
     submit: "Send Message"
+    location-validation: "Milano - Italy"
 
   footer:
     legal: "Privacy Policy"
@@ -155,8 +154,7 @@ en: &DEFAULT_EN
         icon: "fab fa-linkedin-in"
       - url: https://github.com/jorgehcorrea
         icon: "fab fa-github"
-      - url: post.title
-        icon: "fab fa-light fa-pen-nib"
+      
 
 
 

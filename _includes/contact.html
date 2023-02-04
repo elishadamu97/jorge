@@ -5,7 +5,7 @@
       <div class="col-lg-12 text-center">
         <h2 class="section-heading text-uppercase">
           {{ site.data.sitetext[site.locale].contact.title | markdownify | default: Contact Us }}</h2>
-        <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].contact.text | default: "" }}</h3>
+        <h3 style="color: rgb(247, 238, 238);" class="section-subheading text-muted">{{ site.data.sitetext[site.locale].contact.text | default: "" }}</h3>
       </div>
     </div>
     <div class="row">
@@ -28,27 +28,86 @@
                 <p class="help-block text-danger"></p>
               </div>
               <div class="form-group">
-                <input name="phone" class="form-control" id="phone" type="tel"
-                  placeholder="{{ site.data.sitetext[site.locale].contact.phone | default: "Phone Number*" }}"
-                  required="required" data-validation-required-message="{{ site.data.sitetext[site.locale].contact.phone-validation | default: "Please enter your phone number." }}">
-                <p class="help-block text-danger"></p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="form-group">
-                <textarea name="message" class="form-control" id="message"
-                  placeholder="{{ site.data.sitetext[site.locale].contact.message | default: "Message*" }}"
+                <input name="phone" class="form-control" id="message" type="text"
+                  placeholder="{{ site.data.sitetext[site.locale].contact.comment | default: "Comment*" }}"
                   required="required" data-validation-required-message="{{ site.data.sitetext[site.locale].contact.message-validation | default: "Please enter a message." }}">
-                </textarea>
                 <p class="help-block text-danger"></p>
               </div>
             </div>
+            <div class = "vertical"></div>
+            <div class="col-md-6">
+              <div class="text-container">
+                
+                <span class="name1">Name:</span><span class="name2">{{ site.data.sitetext[site.locale].contact.name-validation }}</span>
+                <br><br>
+                <span class="email1">Email:</span><span class="email2">{{ site.data.sitetext[site.locale].contact.email-validation }}</span>
+                <br><br>
+                <span class="location1">Location:</span><span class="location2">{{ site.data.sitetext[site.locale].contact.location-validation }}</span>
+                
+              </div>
+            </div>
+            <style>
+               .vertical {
+                opacity: 0.4;
+            border-left: 2px solid rgb(255, 255, 255);
+            height: 74%;
+            position:absolute;
+            left: 50%;
+        }
+              .text-container{
+                color: rgba(232, 234, 236, 0.495);
+                margin-left: 50px;
+              }
+              .name1, .email1, .location1{
+                font-size: 33px;
+              }
+             .name2, .email2, .location2{
+                margin-left: 50px;
+              }
+              
+              .name2, .email2, .location2{
+                font-size: 23px;
+              }
+              @media screen and (max-width: 480px) {
+                .text-container{
+                color: rgb(234, 41, 255);
+                margin-left: 50px;
+              }
+              .name1, .email1, .location1{
+                font-size: 30px;
+              }
+             .name2, .email2, .location2{
+                margin-left: 50px;
+              }
+              
+              .name2, .email2, .location2{
+                font-size: 25px;
+              }
+            }
+            @media screen and (max-width: 768px) {
+              .text-container{
+                color: rgb(244, 13, 13);
+                margin-left: 50px;
+              }
+              .name1, .email1, .location1{
+                font-size: 40px;
+              }
+             .name2, .email2, .location2{
+                margin-left: 50px;
+              }
+              
+              .name2, .email2, .location2{
+                font-size: 25px;
+              }
+            }
+            </style>
+            
             <input type="hidden" name="_subject" id="email-subject"
               value="{{ site.data.sitetext[site.locale].contact.subject | default: "Contact Form Submission" }}">
             <div class="clearfix"></div>
-            <div class="col-lg-12 text-center">
+            <div class="col-md-1 text-center">
               <div id="success"></div>
-              <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase"
+              <button id="sendMessageButton" class="btn btn-primary  text-uppercase" width="70px"
                 type="submit">{{ site.data.sitetext[site.locale].contact.submit | default: "Send Message" }}</button>
             </div>
             <input type="text" name="_gotcha" style="display:none">
