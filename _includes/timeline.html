@@ -30,9 +30,9 @@
               {% endif %}
             {%- endif -%}
               <div class="timeline-image">
-                <img class="squared" style="width: 350px; height: 330px; margin-left: 200px; border-radius: 7px; border: 7px solid rgb(210, 210, 210);"  src="{{ event.image }}" alt="{{ event.alt | default: ""}}">
+                <img class="squared" src="{{ event.image }}" alt="{{ event.alt | default: ""}}">
               </div>
-              <div class="timeline-panel" style="margin-right: 50px;">
+              <div class="timeline-panel">
                 <div class="timeline-heading">
                   <h4>{{ event.year | markdownify }}</h4>
                   <h4 class="subheading">{{ event.title }}</h4>
@@ -43,7 +43,30 @@
               </div>
             </li>
 		  {% endfor %}
-
+      <style>
+        .squared{
+          width: 350px; height: 330px; margin-left: 200px; border: 7px solid rgb(210, 210, 210);
+        }
+        @media (max-width: 600px) {
+          .timeline{
+            display: flex;
+            flex-direction: column;
+          }
+          .squared{
+            width: 170px;
+            height: 170px;
+            margin-left: 30px;
+            margin-right: 0px;
+          }
+          ::before{
+            display: none;
+          }
+          .timeline-panel{
+            
+            margin-left: 0px;
+          }
+        }
+      </style>
 		  {% if site.data.sitetext[site.locale].timeline.end %}
 			<li class="timeline-inverted">
               <div class="timeline-image">
