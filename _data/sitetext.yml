@@ -140,11 +140,11 @@ en: &DEFAULT_EN
     comment: "Comment*"
     message-validation: "Contact me for any reason"
     subject: "Contact Form Submission"
-    submit: "Send Message"
+    submit: "Submit"
     location-validation: "Milano - Italy"
 
   footer:
-    legal: "Privacy Policy"
+ 
     social:
 #      - url: https://twitter.com/IdJorgecorrea
 #        icon: "fab fa-twitter"
